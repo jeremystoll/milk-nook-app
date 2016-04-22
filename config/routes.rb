@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "/index" => "home#index"
 
   get "/dashboard" => "dashboards#dashboard"
+
+  get '/auth/:provider/callback', to: 'sessions#create'
     
 
 end
