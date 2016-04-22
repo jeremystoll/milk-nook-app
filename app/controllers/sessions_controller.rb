@@ -9,4 +9,6 @@ class SessionsController < ApplicationController
     end
     redirect_to root_path
   end
+
+  #write method to destroy a session
 end

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 
+  # omniauth method taken from the Site Point tutorial, takes argument of auth_hash from Facebook (or any other provider we'd want to use)
   def User.from_omniauth(auth_hash)
     user = find_or_create_by(uid: auth_hash['uid'], provider: auth_hash['provider'])
     user.name = auth_hash['info']['name']
@@ -12,6 +13,8 @@ class User < ActiveRecord::Base
     user
   end
 
+# Example of an actual auth_hash from Facebook, using the info specs that we defined in config/initialize/omniauth.rb
+#
 # {"provider"=>"facebook",
 #  "uid"=>"627641780718854",
 #  "info"=>
