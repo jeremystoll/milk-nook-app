@@ -17,10 +17,11 @@
   <%= render "flashes" -%>
 
   <li><%= link_to 'Facebook', '/auth/facebook' %></li>
-
+   
   <!-- super messy check to see if FB authentication with sessions works :o -->
   <% if session[:user_id] %>
     <%= User.find(session[:user_id]).name %>
+    <img src=<%= profile_pic = User.find(session[:user_id]).photo_url %>>
   <% end %>
 
   <%= yield %>
