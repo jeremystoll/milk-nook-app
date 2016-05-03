@@ -3,9 +3,10 @@ source "https://rubygems.org"
 ruby "2.3.0"
 
 gem "administrate", "~> 0.1.5"
+gem 'omniauth-facebook', '~> 3.0'
+gem 'dotenv', '~> 2.1'
 gem "autoprefixer-rails"
 gem "delayed_job_active_record"
-gem "devise"
 gem "flutie"
 gem "high_voltage"
 gem "honeybadger"
