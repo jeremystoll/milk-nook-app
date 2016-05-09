@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :sponsorships
+  resources :offers
+  resources :requests
   root to: "home#index"
   
   get "/index" => "home#index"

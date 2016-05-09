@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :requests
+  has_many :offers
 
   # omniauth method taken from the Site Point tutorial, takes argument of auth_hash from Facebook (or any other provider we'd want to use)
   def User.from_omniauth(auth_hash)
