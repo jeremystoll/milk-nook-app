@@ -16,7 +16,7 @@
 <body class="<%= body_class %>">
   <%= render "flashes" -%>
 
-  <li><%= link_to 'Facebook', '/auth/facebook' %></li>
+  <li><%= link_to 'Facebook Login', '/auth/facebook' %></li>
    
   <!-- super messy check to see if FB authentication with sessions works :o -->
   <% if session[:user_id] %>

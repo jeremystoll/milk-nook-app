@@ -9,6 +9,10 @@ class SessionsController < ApplicationController
     end
     redirect_to root_path
   end
+  
+  def destroy
 
-  #write method to destroy a session
+  #write method to destroy a session (LOGOUT)
+  
+  end
 end
